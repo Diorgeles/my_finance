@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "/home/diorgelesdias/Documents/virtualenvs/my_finances/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+}
