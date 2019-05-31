@@ -5,7 +5,16 @@ SECRET_KEY = '^x!8-286#k93dwkvzp!$$42s57pszh*l3$k(%ph3dqhc2y!zn@'
 
 ALLOWED_HOSTS = []
 
-INSTALLED_APPS = [
+PROJECT_APPS = [
+    'app.core',
+    'app.finances',
+]
+
+THIRD_PARTY_APPS = [
+    'auditlog'
+]
+
+CORE_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -13,6 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+INSTALLED_APPS = CORE_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
