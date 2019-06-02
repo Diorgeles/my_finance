@@ -65,7 +65,8 @@ class Category(models.Model):
     category_type = models.CharField(
         'Tipo de Categoria', max_length=50, choices=CATEGORY_TYPE)
     icon = models.ImageField(
-        'Icone', upload_to=None, height_field=None, width_field=None)
+        'Icone', upload_to=None, height_field=None, width_field=None,
+        blank=True)
 
     class Meta:
         """Meta definition for Category."""
