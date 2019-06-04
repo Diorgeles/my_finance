@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    image: my_finance:0.0.1
+    build: .
+    command: ./runserver
+    volumes:
+      - ".:/my_finance"
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: postgres:10.3
