@@ -1,0 +1,12 @@
+{
+  "name": "my_finance",
+  "version": "0.0.1",
+  "description": "My system to control finances",
+  "main": "index.js",
+  "repository": "git@github.com:Diorgeles/my_finance.git",
+  "author": "Diorgeles <diorgelesdias@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack-bundle-tracker": "^0.4.2-beta"
+  }
+}
