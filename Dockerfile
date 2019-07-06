@@ -12,4 +12,4 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - \
 
 EXPOSE 8000
 
-CMD python manage.py runserver 0.0.0.0:$PORT
+CMD "python manage.py runserver 0.0.0.0:$PORT"
