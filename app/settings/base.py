@@ -4,7 +4,7 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^x!8-286#k93dwkvzp!$$42s57pszh*l3$k(%ph3dqhc2y!zn@'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 PROJECT_APPS = [
     'app.core',
