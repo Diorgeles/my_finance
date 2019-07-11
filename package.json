@@ -1,0 +1,31 @@
+{
+  "name": "my_finance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Diorgeles/my_finance.git",
+  "author": "Diorgeles Dias Lima <diorgelesdias@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development --watch --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.js"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^2.1.1",
+    "cypress": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-bundle-tracker": "^0.4.2-beta",
+    "webpack-cli": "^3.3.0"
+  }
+}

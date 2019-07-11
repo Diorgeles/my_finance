@@ -13,7 +13,8 @@ PROJECT_APPS = [
 
 THIRD_PARTY_APPS = [
     'auditlog',
-    'rest_framework'
+    'rest_framework',
+    'webpack_loader'
 ]
 
 CORE_APPS = [
@@ -38,11 +39,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'app.urls'
-
+print(BASE_DIR)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,8 +111,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = 'assets/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'assets/media/')
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'node_modules'),
+    # os.path.join(BASE_DIR, 'node_modules'),
+    os.path.join(BASE_DIR, 'assets'),
 ]
 
 # HEROKU #
@@ -120,3 +129,11 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# WEBPACK #
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'assets/webpack-stats.json'),
+    }
+}
